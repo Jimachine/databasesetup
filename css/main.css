@@ -5,7 +5,23 @@ body {
   background-color: 16262E;
 }
 
+header {
+  border-bottom: 5px solid #9FA2B2;
+}
+
 body header a h1 {
-  color: #2E4756;
+  color: #2E8B57;
   text-align: center;
+}
+
+table {
+  color: #2E8B57;
+  text-align: center;
+  margin: 2% auto;
+  align-content: center;
+}
+
+table td {
+  border:1px solid #FFF;
+  border-color: #3C7A89;
 }
