@@ -19,9 +19,16 @@ table {
   text-align: center;
   margin: 2% auto;
   align-content: center;
+  font-size: 150%;
 }
 
-table td {
+table td,
+table th {
   border:1px solid #FFF;
   border-color: #3C7A89;
+}
+
+table th {
+  font-weight: bold;
+  color: #AFEEEE;
 }
