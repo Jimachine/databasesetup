@@ -1,0 +1,11 @@
+/******************************************
+GENERAL
+******************************************/
+body {
+  background-color: 16262E;
+}
+
+body header a h1 {
+  color: #2E4756;
+  text-align: center;
+}
