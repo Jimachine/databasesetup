@@ -13,7 +13,7 @@ body header a h1 {
   font-family: 'changa one', sans-serif;
   color: #2E8B57;
   text-align: center;
-  margin: 40 0 0 0;
+  margin: 0;
   line-height: 0.8em;
   width: 100%;
   padding: 20px 20px 20px 20px;
@@ -43,14 +43,12 @@ img {
   padding: 20px 0 0 70px;
   border: 0;
   max-width: 100%;
-  display: inline-block;
+  position: absolute;
 }
 
 nav ul li a {
   font-size: 1.25em;
   padding: 20px;
-  text-decoration: none;
-  text-align: left;
-  list-style-image: none;
+  text-align: center;
   font-family: 'open sans', sans-serif;
 }

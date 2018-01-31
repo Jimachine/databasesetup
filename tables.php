@@ -11,9 +11,19 @@
   </head>
   <body>
     <header>
+      <a href="index.php" id="logo">
+        <img src="img/warframelogo.png" alt="">
+      </a>
       <a>
         <h1>WARFRAME</h1>
       </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="tables.php">Database</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   </body>
 </html>
