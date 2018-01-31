@@ -11,19 +11,50 @@
   </head>
   <body>
     <header>
-      <a href="index.php" id="logo">
-        <img src="img/warframelogo.png" alt="">
-      </a>
       <a>
         <h1>WARFRAME</h1>
       </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="tables.php">Database</a>
-          </li>
-        </ul>
-      </nav>
     </header>
   </body>
 </html>
+
+<?php
+  $db = new PDO('mysql:host=localhost;dbname=warframe;charset=utf8mb4', 'root', 'root');
+  $stmt = $db->prepare("SELECT * FROM primary_weapons");
+  $stmt->execute();
+  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  // print_r($rows);
+
+
+  echo '<table class="table table-dark">';
+
+  echo "<thead>";
+    echo "<tr>";
+      echo "<th>ID</th>";
+      echo "<th>Name</th>";
+      echo "<th>Owned</th>";
+    echo "</tr>";
+  echo "</thead>";
+
+  foreach ($rows as $row) {
+    echo "<tr>";
+      echo "<td>" . $row['pw_id'] . "</td>";
+      echo "<td>" . $row['pw_name'] . "</td>";
+
+      echo "<td>";
+        if($row['pw_owned'] == 0) {
+          echo "No";
+        }
+
+        else {
+          echo "Yes";
+        }
+      echo "</td>";
+
+    echo "</tr>";
+  }
+
+  echo "</table>";
+
+?>
