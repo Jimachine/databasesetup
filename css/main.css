@@ -40,14 +40,16 @@ table th {
 
 img {
   float: none;
+  clear: both;
   padding: 20px 0 0 70px;
   border: 0;
-  max-width: 100%;
   position: absolute;
 }
 
 nav ul li a {
   font-size: 1.25em
-  text-align: center;
+  float: left;
+  clear: both;
+  display: inline-block;
   font-family: 'open sans', sans-serif;
 }
