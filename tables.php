@@ -22,6 +22,9 @@
           <li>
             <a href="tables.php">Database</a>
           </li>
+          <li>
+            <a href="voidrelics.php">Void Relics</a>
+          </li>
         </ul>
       </nav>
     </header>
