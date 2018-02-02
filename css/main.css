@@ -47,9 +47,8 @@ img {
 }
 
 nav ul li a {
-  font-size: 1.25em
+  font-size: 1.25em;
   float: left;
-  clear: both;
-  display: inline-block;
+  padding: 20px;
   font-family: 'open sans', sans-serif;
 }

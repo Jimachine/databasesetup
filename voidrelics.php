@@ -30,3 +30,35 @@
     </header>
   </body>
 </html>
+
+<?php
+  $db = new PDO('mysql:host=localhost;dbname=warframe;charset=utf8mb4', 'root', 'root');
+  $stmt = $db->prepare("SELECT * FROM void_relics");
+  $stmt->execute();
+  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+echo '<table class="table table-dark">';
+  echo "<thead>";
+    echo "<tr>";
+      echo "<th>ID</th>";
+      echo "<th>Tier</th>";
+      echo "<th>Type</th>";
+      echo "<th>Common Rewards</th>";
+      echo "<th>Uncommon Rewards</th>";
+      echo "<th>Rare Rewards</th>";
+    echo "</tr>";
+  echo "</thead>";
+
+  foreach ($rows as $row) {
+    echo "<tr>";
+      echo "<td>" . $row['vr_id'] . "</td>";
+      echo "<td>" . $row['vr_tier'] . "</td>";
+      echo "<td>" . $row['vr_type'] . "</td>";
+      echo "<td>" . $row['vr_common_rewards'] . "</td>";
+      echo "<td>" . $row['vr_uncommon_rewards'] . "</td>";
+      echo "<td>" . $row['vr_rare_rewards'] . "</td>";
+    echo "</tr>";
+  }
+
+echo "</table>";
+?>
