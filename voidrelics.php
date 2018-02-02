@@ -54,7 +54,15 @@ echo '<table class="table table-dark">';
       echo "<td>" . $row['vr_id'] . "</td>";
       echo "<td>" . $row['vr_tier'] . "</td>";
       echo "<td>" . $row['vr_type'] . "</td>";
-      echo "<td>" . $row['vr_common_rewards'] . "</td>";
+      echo "<td class='reward'>";
+      $vr_common_rewards = array();
+        $vr_common_rewards = explode(',', $row['vr_common_rewards']);
+      echo "<ul>";
+      foreach ($vr_common_rewards as $vr_common_reward) {
+        echo "<li>" . $vr_common_reward . "</li>";
+      }
+      echo "</ul>";
+      echo"</td>";
       echo "<td>" . $row['vr_uncommon_rewards'] . "</td>";
       echo "<td>" . $row['vr_rare_rewards'] . "</td>";
     echo "</tr>";

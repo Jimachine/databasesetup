@@ -55,15 +55,19 @@
       echo "<td>" . $row['pw_id'] . "</td>";
       echo "<td>" . $row['pw_name'] . "</td>";
 
-      echo "<td>";
+
         if($row['pw_owned'] == 0) {
-          echo "No";
+          echo "<td class='notowned'>";
+            echo "No";
+          echo "</td>";
         }
 
         else {
-          echo "Yes";
+          echo "<td class='owned'>";
+            echo "Yes";
+          echo "</td>";
         }
-      echo "</td>";
+
 
     echo "</tr>";
   }
