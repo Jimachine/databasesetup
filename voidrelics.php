@@ -1,72 +1,65 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Changa+One|Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warframe Database</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.php" id="logo">
-        <img src="img/warframelogo.png" alt="">
-      </a>
-      <a>
-        <h1>WARFRAME</h1>
-      </a>
-      <nav>
+<?php include "incs/header.php"; ?>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tier</th>
+      <th>Type</th>
+      <th>Common Rewards</th>
+      <th>Uncommon Rewards</th>
+      <th>Rare Rewards</th>
+    </tr>
+  </thead>
+
+  <?php foreach ($rows as $row): ?>
+    <tr>
+      <td> <?php echo $row['vr_id']; ?> </td>
+      <td> <?php echo $row['vr_tier']; ?> </td>
+      <td> <?php echo $row['vr_type']; ?> </td>
+      <td class='reward'>
+        <?php
+          echo $vr_common_rewards = array();
+          echo $vr_common_rewards = explode(',', $row['vr_common_rewards']);
+        ?>
         <ul>
-          <li>
-            <a href="tables.php">Database</a>
-          </li>
-          <li>
-            <a href="voidrelics.php">Void Relics</a>
-          </li>
+          <?php
+            foreach ($vr_common_rewards as $vr_common_reward):
+          ?>
+            <li> <?php echo $vr_common_reward ?> </li>
         </ul>
-      </nav>
-    </header>
-  </body>
-</html>
+      </td>
+      <td>
+        <?php
+          echo $vr_uncommon_rewards = array();
+          echo $vr_uncommon_rewards = explode(',', $row['vr_uncommon_rewards']);
+        ?>
+      <ul>
+      <?php
+        foreach ($vr_uncommon_rewards as $vr_uncommon_reward):
+      ?>
+        <li>
+          <?php echo $vr_uncommon_reward ?>
+        </li>
 
-<?php
-  $db = new PDO('mysql:host=localhost;dbname=warframe;charset=utf8mb4', 'root', 'root');
-  $stmt = $db->prepare("SELECT * FROM void_relics");
-  $stmt->execute();
-  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      </ul>
+      </td>
+      <td>
+        <?php
+          echo $vr_rare_rewards = array();
+          echo $vr_rare_rewards = explode(',', $row['vr_rare_rewards']);
+        ?>
+      <ul>
+      <?php
+        foreach ($vr_rare_rewards as $vr_rare_reward):
+      ?>
+        <li>
+          <?php echo $vr_rare_reward ?>
+        </li>
 
-echo '<table class="table table-dark">';
-  echo "<thead>";
-    echo "<tr>";
-      echo "<th>ID</th>";
-      echo "<th>Tier</th>";
-      echo "<th>Type</th>";
-      echo "<th>Common Rewards</th>";
-      echo "<th>Uncommon Rewards</th>";
-      echo "<th>Rare Rewards</th>";
-    echo "</tr>";
-  echo "</thead>";
+      </ul>
+      </td>
+    </tr>
 
-  foreach ($rows as $row) {
-    echo "<tr>";
-      echo "<td>" . $row['vr_id'] . "</td>";
-      echo "<td>" . $row['vr_tier'] . "</td>";
-      echo "<td>" . $row['vr_type'] . "</td>";
-      echo "<td class='reward'>";
-      $vr_common_rewards = array();
-        $vr_common_rewards = explode(',', $row['vr_common_rewards']);
-      echo "<ul>";
-      foreach ($vr_common_rewards as $vr_common_reward) {
-        echo "<li>" . $vr_common_reward . "</li>";
-      }
-      echo "</ul>";
-      echo"</td>";
-      echo "<td>" . $row['vr_uncommon_rewards'] . "</td>";
-      echo "<td>" . $row['vr_rare_rewards'] . "</td>";
-    echo "</tr>";
-  }
-
-echo "</table>";
-?>
+</table>
