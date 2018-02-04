@@ -1,5 +1,11 @@
 <?php include "incs/header.php"; ?>
 
+<?php
+  $stmt = $db->prepare("SELECT * FROM primary_weapons");
+  $stmt->execute();
+  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
   <table class="table table-dark">
 
     <thead>

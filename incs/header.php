@@ -1,9 +1,6 @@
+//Database Connection
 <?php
-  //Database Connection
   $db = new PDO('mysql:host=localhost;dbname=warframe;charset=utf8mb4', 'root', 'root');
-  $stmt = $db->prepare("SELECT * FROM primary_weapons");
-  $stmt->execute();
-  $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <html>
