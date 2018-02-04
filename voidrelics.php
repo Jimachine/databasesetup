@@ -12,7 +12,7 @@
       </tr>
     </thead>
 
-    <?php echo foreach ($rows as $row): ?>
+    <?php foreach ($rows as $row): ?>
       <tr>
         <td><?php echo $row['vr_id']; ?></td>
         <td><?php echo $row['vr_tier']; ?></td>
@@ -23,7 +23,7 @@
             $vr_common_rewards = explode(',', $row['vr_common_rewards']);
           ?>
           <ul>
-            <?php echo foreach ($vr_common_rewards as $vr_common_reward): ?>
+            <?php foreach ($vr_common_rewards as $vr_common_reward): ?>
               <li><?php echo $vr_common_reward; ?></li>
             <?php endforeach; ?>
           </ul>
@@ -45,7 +45,7 @@
             $vr_rare_rewards = explode(',', $row['vr_rare_rewards']);
           ?>
         <ul>
-          <?php echo foreach ($vr_rare_rewards as $vr_rare_reward): ?>
+          <?php foreach ($vr_rare_rewards as $vr_rare_reward): ?>
             <li><?php echo $vr_rare_reward ?></li>
           <?php endforeach; ?>
         </ul>
