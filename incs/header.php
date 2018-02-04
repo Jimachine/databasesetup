@@ -20,19 +20,15 @@
   <body>
     <header>
       <a href="index.php" id="logo">
-        <img src="img/warframelogo.png" alt="">
+        <img src="img/warframelogo.png" alt="Warframe Logo">
       </a>
       <a>
         <h1>WARFRAME</h1>
       </a>
       <nav>
         <ul>
-          <li>
-            <a href="tables.php">Database</a>
-          </li>
-          <li>
-            <a href="voidrelics.php">Void Relics</a>
-          </li>
+          <li><a href="tables.php">Database</a></li>
+          <li><a href="voidrelics.php">Void Relics</a></li>
         </ul>
       </nav>
     </header>
