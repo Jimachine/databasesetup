@@ -9,7 +9,6 @@
   <table class="table table-dark">
     <thead>
       <tr>
-        <th>ID</th>
         <th>Tier</th>
         <th>Type</th>
         <th>Common Rewards</th>
@@ -20,7 +19,6 @@
 
     <?php foreach ($rows as $row): ?>
       <tr>
-        <td><?php echo $row['vr_id']; ?></td>
         <td><?php echo $row['vr_tier']; ?></td>
         <td><?php echo $row['vr_type']; ?></td>
         <td class="reward">

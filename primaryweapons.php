@@ -10,16 +10,16 @@
 
     <thead>
       <tr>
-        <th>ID</th>
         <th>Name</th>
+        <th>Obtained From</th>
         <th>Owned</th>
       </tr>
     </thead>
 
     <?php foreach ($rows as $row): ?>
       <tr>
-        <td><?php echo $row['pw_id']; ?></td>
         <td><?php echo $row['pw_name']; ?></td>
+        <td><?php echo $row['pw_obtained_via']; ?></td>
 
         <?php if($row['pw_owned'] == 0): ?>
           <td class="notowned">No</td>
