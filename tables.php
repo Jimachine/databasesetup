@@ -1,4 +1,4 @@
-<?php include "incs/header.php"; ?> <!-- include header file to keep it consistance across all pages and easy to maintain -->
+<?php include "incs/header.php"; ?>
 
   <table class="table table-dark">
 
@@ -10,28 +10,20 @@
       </tr>
     </thead>
 
-    <?php foreach ($rows as $row): ?> <!-- start looping over sql query results row by row -->
+    <?php foreach ($rows as $row): ?>
       <tr>
         <td><?php echo $row['pw_id']; ?></td>
         <td><?php echo $row['pw_name']; ?></td>
 
-        <?php if($row['pw_owned'] == 0): ?>   <!-- START IF - if the item is NOT OWNED and add class "notowned" to the cell -->
+        <?php if($row['pw_owned'] == 0): ?>
           <td class="notowned">No</td>
-        <?php else: ?>                        <!-- else/otherwise we know it is OWNED so add class "owned" to the cell -->
+        <?php else: ?>
           <td class="owned">Yes</td>
-        <?php endif; ?>                       <!-- END IF -->
+        <?php endif; ?>
 
       </tr>
-    <?php endforeach; ?> <!-- end loop -->
+    <?php endforeach; ?>
 
   </table>
 
-<!--
-  Note: You are missing the closing </body> and </html> tags.
-
-  Step 1  - Create a footer.php file like you did with header.php
-
-  Step 2 - add the missing closing tags mentioned above to the new footer.php
-
-  Step 3 - include the footer file here and at the bottom of all your other pages like you did with the header file at the top of this page.
- -->
+<?php include "incs/footer.php"; ?>
