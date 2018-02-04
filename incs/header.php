@@ -24,7 +24,7 @@
       </a>
       <nav>
         <ul>
-          <li><a href="tables.php">Database</a></li>
+          <li><a href="primaryweapons.php">Primary Weapons</a></li>
           <li><a href="voidrelics.php">Void Relics</a></li>
         </ul>
       </nav>

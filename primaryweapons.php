@@ -1,7 +1,7 @@
 <?php include "incs/header.php"; ?>
 
 <?php
-  $stmt = $db->prepare("SELECT * FROM primary_weapons");
+  $stmt = $db->prepare("SELECT * FROM primary_weapons ORDER BY pw_owned, pw_name");
   $stmt->execute();
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
