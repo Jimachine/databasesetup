@@ -53,10 +53,10 @@ nav ul li a {
   font-family: 'open sans', sans-serif;
 }
 
-td.notowned {
+td.notowned, td.vaulted {
   background-color: red;
 }
 
-td.owned {
+td.owned, td.notvaulted {
   background-color: green;
 }

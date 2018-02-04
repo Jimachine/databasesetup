@@ -1,7 +1,7 @@
 <?php include "incs/header.php"; ?>
 
 <?php
-  $stmt = $db->prepare("SELECT * FROM void_relics");
+  $stmt = $db->prepare("SELECT * FROM void_relics ORDER BY vr_vaulted, vr_tier, vr_type");
   $stmt->execute();
   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -11,6 +11,7 @@
       <tr>
         <th>Tier</th>
         <th>Type</th>
+        <th>Vaulted</th>
         <th>Common Rewards</th>
         <th>Uncommon Rewards</th>
         <th>Rare Rewards</th>
@@ -21,6 +22,13 @@
       <tr>
         <td><?php echo $row['vr_tier']; ?></td>
         <td><?php echo $row['vr_type']; ?></td>
+
+          <?php if ($row['vr_vaulted'] == 0): ?>
+            <td class="notvaulted"></td>
+          <?php else: ?>
+            <td class="vaulted"></td>
+          <?php endif; ?>
+
         <td class="reward">
           <?php
             $vr_common_rewards = array();
