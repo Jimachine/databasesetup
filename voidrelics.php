@@ -19,15 +19,30 @@
     </thead>
 
     <?php foreach ($rows as $row): ?>
+
+      <?php
+        if($row['vr_vaulted'] == 0) {
+          $vrvaulted = "notvaulted";
+        }
+        else: {
+          $vrvaulted = "vaulted";
+        }
+        endif;
+      ?>
+      <tr class="<?php echo $vrvaulted ?>">
+
       <tr>
         <td><?php echo $row['vr_tier']; ?></td>
         <td><?php echo $row['vr_type']; ?></td>
 
-          <?php if ($row['vr_vaulted'] == 0): ?>
-            <td class="notvaulted"></td>
-          <?php else: ?>
-            <td class="vaulted"></td>
-          <?php endif; ?>
+
+<tr class="<?php echo $row_check_variable ?>">
+
+          <!-- <?php if ($row['vr_vaulted'] == 0): ?> -->
+            <!-- <td class="notvaulted"> -->
+          <!-- <?php else: ?> -->
+            <!-- <td class="vaulted"></td> -->
+          <!-- <?php endif; ?> -->
 
         <td class="reward">
           <?php
