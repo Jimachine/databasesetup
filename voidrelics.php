@@ -31,12 +31,9 @@
       ?>
       <tr class="<?php echo $vrvaulted ?>">
 
-      <tr>
         <td><?php echo $row['vr_tier']; ?></td>
         <td><?php echo $row['vr_type']; ?></td>
 
-
-<tr class="<?php echo $row_check_variable ?>">
 
           <!-- <?php if ($row['vr_vaulted'] == 0): ?> -->
             <!-- <td class="notvaulted"> -->
