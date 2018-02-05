@@ -28,7 +28,6 @@
         else {
           $vrvaulted = "vaulted";
         }
-        endif;
       ?>
       <tr class="<?php echo $vrvaulted ?>">
 
