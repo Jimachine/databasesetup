@@ -11,7 +11,6 @@
       <tr>
         <th>Tier</th>
         <th>Type</th>
-        <th>Vaulted</th>
         <th>Common Rewards</th>
         <th>Uncommon Rewards</th>
         <th>Rare Rewards</th>
