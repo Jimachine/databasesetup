@@ -21,10 +21,11 @@
     <?php foreach ($rows as $row): ?>
 
       <?php
+        //check to see if the current row is vaulted or not and assign the row the correct class.
         if($row['vr_vaulted'] == 0) {
           $vrvaulted = "notvaulted";
         }
-        else: {
+        else {
           $vrvaulted = "vaulted";
         }
         endif;
@@ -33,13 +34,6 @@
 
         <td><?php echo $row['vr_tier']; ?></td>
         <td><?php echo $row['vr_type']; ?></td>
-
-
-          <!-- <?php if ($row['vr_vaulted'] == 0): ?> -->
-            <!-- <td class="notvaulted"> -->
-          <!-- <?php else: ?> -->
-            <!-- <td class="vaulted"></td> -->
-          <!-- <?php endif; ?> -->
 
         <td class="reward">
           <?php
