@@ -26,6 +26,7 @@
         <ul>
           <li><a href="primaryweapons.php">Primary Weapons</a></li>
           <li><a href="secondaryweapons.php">Secondary Weapons</a></li>
+          <li><a href="meleeweapons.php">Melee Weapons</a></li>
           <li><a href="voidrelics.php">Void Relics</a></li>
         </ul>
       </nav>
