@@ -9,6 +9,13 @@ header {
   border-bottom: 5px solid #9FA2B2;
 }
 
+/*  this creates an element right before the closing </header> we use it to clear both so the menu li's that are now floating don't break through the bottom, remove this bit to see it breaking */
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
 body header a h1 {
   font-family: 'changa one', sans-serif;
   color: #2E8B57;
@@ -44,6 +51,11 @@ img {
   padding: 20px 0 0 70px;
   border: 0;
   position: absolute;
+}
+
+/*  added a float so they stack up to the left */
+nav ul li {
+  float: left;
 }
 
 nav ul li a {
