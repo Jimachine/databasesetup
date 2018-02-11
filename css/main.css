@@ -48,8 +48,9 @@ img {
 
 nav ul li a {
   font-size: 1.25em;
-  float: left;
-  padding: 20px;
+  display: inline;
+  margin: auto;
+  text-align: center;
   font-family: 'open sans', sans-serif;
 }
 
@@ -59,4 +60,25 @@ td.notowned, tr.vaulted {
 
 td.owned, tr.notvaulted {
   background-color: green;
+}
+
+div.talents {
+  display: block;
+  min-height: 100vh;
+  align-items: left;
+  justify-content: left;
+}
+
+div.talent {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
 }
