@@ -5,6 +5,12 @@ body {
   background-color: #16262E;
 }
 
+body:before {
+    display: block;
+    content: "";
+    clear: both;
+}
+
 header {
   border-bottom: 5px solid #9FA2B2;
 }
@@ -60,6 +66,7 @@ nav ul li {
 
 nav ul li a {
   font-size: 1.25em;
+  padding: 10px;
   display: inline;
   margin: auto;
   text-align: center;
@@ -75,7 +82,7 @@ td.owned, tr.notvaulted {
 }
 
 div.talents {
-  display: block;
+  display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
