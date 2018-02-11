@@ -65,8 +65,8 @@ td.owned, tr.notvaulted {
 div.talents {
   display: block;
   min-height: 100vh;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
 }
 
 div.talent {
